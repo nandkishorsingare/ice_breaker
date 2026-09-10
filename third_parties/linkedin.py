@@ -27,7 +27,15 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = False):
             timeout=10,
         )
 
+    response.raise_for_status()
+
     data = response.json().get("person")
+    if not data:
+        raise ValueError(
+            f"No profile data returned for {linkedin_profile_url!r} "
+            f"(response: {response.json()})"
+        )
+
     data = {
         k: v
         for k, v in data.items()

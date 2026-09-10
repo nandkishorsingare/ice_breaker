@@ -134,11 +134,13 @@ OPENAI_API_KEY=your_openai_api_key_here
 SCRAPIN_API_KEY=your_scrapin_api_key_here
 TAVILY_API_KEY=your_tavily_api_key_here
 
-# Optional: Twitter scraping (if you want Twitter data)
+# Optional: Twitter scraping (only needed for the live scrape_user_tweets;
+# the pipeline uses scrape_user_tweets_mock by default)
 TWITTER_API_KEY=your_twitter_api_key_here
-TWITTER_API_SECRET=your_twitter_api_secret_here
+TWITTER_API_KEY_SECRET=your_twitter_api_key_secret_here
+TWITTER_BEARER_TOKEN=your_twitter_bearer_token_here
 TWITTER_ACCESS_TOKEN=your_twitter_access_token_here
-TWITTER_ACCESS_SECRET=your_twitter_access_secret_here
+TWITTER_ACCESS_TOKEN_SECRET=your_twitter_access_token_secret_here
 
 # Optional: Enable LangSmith tracing
 LANGCHAIN_TRACING_V2=true
@@ -154,9 +156,10 @@ LANGCHAIN_PROJECT=ice_breaker
 | `SCRAPIN_API_KEY` | Scrapin.io API key for LinkedIn scraping | ✅ |
 | `TAVILY_API_KEY` | Tavily API key for enhanced web search | ✅ |
 | `TWITTER_API_KEY` | Twitter API key for social data access (optional) | ⚪ |
-| `TWITTER_API_SECRET` | Twitter API secret (optional) | ⚪ |
+| `TWITTER_API_KEY_SECRET` | Twitter API key secret (optional) | ⚪ |
+| `TWITTER_BEARER_TOKEN` | Twitter bearer token (optional) | ⚪ |
 | `TWITTER_ACCESS_TOKEN` | Twitter access token (optional) | ⚪ |
-| `TWITTER_ACCESS_SECRET` | Twitter access token secret (optional) | ⚪ |
+| `TWITTER_ACCESS_TOKEN_SECRET` | Twitter access token secret (optional) | ⚪ |
 | `LANGCHAIN_TRACING_V2` | Enable LangSmith tracing (optional) | ⚪ |
 | `LANGCHAIN_API_KEY` | LangSmith API key (required if tracing enabled) | ⚪ |
 | `LANGCHAIN_PROJECT` | LangSmith project name (optional) | ⚪ |

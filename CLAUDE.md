@@ -73,7 +73,7 @@ Required environment variables in `.env`:
 - `OPENAI_API_KEY` - OpenAI API for LLM
 - `SCRAPIN_API_KEY` - Scrapin.io for LinkedIn data
 - `TAVILY_API_KEY` - Tavily for web search
-- `TWITTER_API_KEY`, `TWITTER_API_SECRET`, `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_SECRET` - Optional Twitter API
+- `TWITTER_API_KEY`, `TWITTER_API_KEY_SECRET`, `TWITTER_BEARER_TOKEN`, `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET` - Optional Twitter API (only needed for `scrape_user_tweets`; the pipeline uses `scrape_user_tweets_mock` by default)
 
 Optional LangSmith tracing:
 - `LANGCHAIN_TRACING_V2=true`
